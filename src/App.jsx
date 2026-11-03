@@ -1,122 +1,64 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import PlaceholderPage from "./pages/PlaceholderPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/menu"
+            element={<PlaceholderPage title="Our Menu" description="Explore our freshly prepared dishes." />}
+          />
+          <Route
+            path="/cart"
+            element={<PlaceholderPage title="Your Cart" description="Your selected dishes will appear here." />}
+          />
+          <Route
+            path="/reservations"
+            element={<PlaceholderPage title="Reservations" description="Book a table for your next visit." />}
+          />
+          <Route
+            path="/login"
+            element={<PlaceholderPage title="Login" description="Sign in to your restaurant account." />}
+          />
+          <Route
+            path="/register"
+            element={<PlaceholderPage title="Create an Account" description="Join us and enjoy a better dining experience." />}
+          />
+          <Route
+            path="/my-orders"
+            element={<PlaceholderPage title="My Orders" description="View your previous and current orders." />}
+          />
+          <Route
+            path="/admin"
+            element={<PlaceholderPage title="Admin Dashboard" description="Manage your restaurant from one place." />}
+          />
+          <Route
+            path="/admin/menu"
+            element={<PlaceholderPage title="Manage Menu" description="Add, edit, and remove menu items." />}
+          />
+          <Route
+            path="/admin/orders"
+            element={<PlaceholderPage title="Manage Orders" description="Review and update customer orders." />}
+          />
+          <Route
+            path="/admin/reservations"
+            element={<PlaceholderPage title="Manage Reservations" description="Review customer table reservations." />}
+          />
+          <Route
+            path="*"
+            element={<PlaceholderPage title="Page Not Found" description="The page you requested does not exist." />}
+          />
+        </Routes>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
+export default App;
