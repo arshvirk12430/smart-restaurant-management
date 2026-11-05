@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #25251f;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "DM Sans", sans-serif;
+  color: #25251f;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 60vh;
+}
+
+/* Navigation */
+
+.navbar {
+  min-height: 76px;
+}
+
+.navbar-brand {
+  color: #25251f;
+  font-size: 1.1rem;
+  letter-spacing: -0.4px;
+}
+
+.navbar-brand:hover {
+  color: #25251f;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e9eee5;
+  color: #526b47;
+  font-size: 1.35rem;
+}
+
+.brand-subtitle {
+  font-size: 0.58rem;
+  letter-spacing: 2.5px;
+  color: #858579;
+}
+
+.nav-link {
+  color: #66665e;
+  font-size: 0.94rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #526b47;
+}
+
+/* Homepage hero */
+
+.hero-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 25%, #e9eee5 0, transparent 28%),
+    linear-gradient(120deg, #fbfaf6, #f3f3ec);
+}
+
+.min-vh-hero {
+  min-height: 590px;
+}
+
+.eyebrow {
+  color: #657d58;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  max-width: 650px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.accent-text {
+  color: #687f58;
+}
+
+.hero-description {
+  max-width: 550px;
+  color: #73736b;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.hero-note {
+  color: #77776e;
+  font-size: 0.84rem;
+}
+
+.hero-note i {
+  color: #657d58;
+}
+
+/* Hero decorative artwork */
+
+.hero-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 390px;
+}
+
+.hero-art-circle {
+  display: grid;
+  place-items: center;
+  width: min(330px, 75vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(82, 107, 71, 0.15);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e1e9d9, #c6d2b8);
+  box-shadow: 0 25px 65px rgba(54, 72, 43, 0.14);
+}
+
+.hero-art-circle i {
+  color: #526b47;
+  font-size: 9rem;
+}
+
+.hero-art-label {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.hero-art-label span {
+  color: #788c69;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.floating-decoration {
+  position: absolute;
+  color: #879b75;
+  font-size: 2.5rem;
+}
+
+.decoration-one {
+  top: 35px;
+  right: 35px;
+}
+
+.decoration-two {
+  bottom: 75px;
+  left: 15px;
+}
+
+/* Features */
+
+.features-section {
+  background: #ffffff;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.feature-card {
+  padding: 32px;
+  border: 1px solid #eeeeea;
+  border-radius: 16px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: #edf1e9;
+  color: #526b47;
+  font-size: 1.5rem;
+}
+
+.feature-card h5 {
+  font-weight: 700;
+}
+
+.feature-card p {
+  margin-bottom: 0;
+  color: #77776e;
+  line-height: 1.7;
+}
+
+/* Call to action */
+
+.cta-section {
+  background: #526b47;
+}
+
+.cta-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+/* Footer */
+
+.site-footer {
+  background: #242820;
+}
+
+.site-footer h4 {
+  font-family: "Playfair Display", serif;
+}
+
+.footer-description {
+  color: #b8bdb1;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #b8bdb1;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-divider {
+  margin: 30px 0 20px;
+  border-color: #51564b;
+}
+
+/* Temporary pages */
+
+.placeholder-section {
+  display: grid;
+  min-height: 65vh;
+  place-items: center;
+  padding: 70px 0;
+}
+
+.placeholder-icon {
+  color: #657d58;
+  font-size: 3rem;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 15px 0;
+  }
+
+  .hero-art {
+    min-height: 330px;
+  }
+
+  .hero-art-label {
+    right: 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    letter-spacing: -1px;
+  }
+
+  .hero-art-circle {
+    width: 250px;
+  }
+
+  .hero-art-circle i {
+    font-size: 7rem;
+  }
+
+  .hero-art-label {
+    right: 0;
+    bottom: 5px;
+  }
+}
